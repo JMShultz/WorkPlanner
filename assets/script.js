@@ -9,7 +9,7 @@ function displayTime() {
 
 
 
-
+// handles keeping hours current with the time displayed
 function UpdateHours() {
   var rightNow = dayjs().hour();
   
@@ -36,7 +36,7 @@ if (Hours<rightNow){
 }
 
  
-
+// this will save information with clicked and keep it in local storage.
  function SaveData(){
 
   $(".saveBtn").on("click", function () {
@@ -50,7 +50,7 @@ if (Hours<rightNow){
 
  }
   
-    
+    // will get items from local storage.
   $('#hour-9 .description').val(localStorage.getItem('hour-9'));
   $('#hour-10 .description').val(localStorage.getItem('hour-10'));
   $('#hour-11 .description').val(localStorage.getItem('hour-11'));
@@ -60,7 +60,9 @@ if (Hours<rightNow){
   $('#hour-15 .description').val(localStorage.getItem('hour-15'));
   $('#hour-16 .description').val(localStorage.getItem('hour-16'));
   $('#hour-17 .description').val(localStorage.getItem('hour-17'));
- 
+
+
+ // display functions.
 UpdateHours();
 SaveData();
 displayTime();
